@@ -19,7 +19,7 @@
     @endif
     <div class="card">
         <header class="card-header">
-            <h5 class="card-header-title">Nous avon sélectionné pour vous</h5>
+            <h5 class="card-header-title">Nous avons sélectionné pour vous</h5>
         </header>
         <div class="card-content">
             <div class="content">
@@ -39,6 +39,7 @@
                             <td><strong> {{ $manga->titre }} </strong></td>
                             <td> {{ $manga->genre }} </td>
                             <td><a class="btn btn-primary" href="{{route('mangas.show', $manga->id) }}">Voir</a></td>
+                            <td><a class="btn btn-warning" href="{{route('mangas.edit', $manga->id) }}">Modifier</a></td>
                             <td>
                                 <form action="{{ route('mangas.destroy', $manga->id) }}" method="post">
                                     @csrf
